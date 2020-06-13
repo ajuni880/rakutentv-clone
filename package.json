@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "dev": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js",
+    "start": "node ./server/index.js",
+    "heroku-postbuild": "npm run build"
   },
   "browserslist": [
     "last 2 Chrome versions",
@@ -40,6 +42,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "ky": "^0.20.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
