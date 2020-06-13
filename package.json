@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js",
+    "build:prod": "webpack --config webpack.prod.js",
     "start": "node ./server/index.js",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build:prod"
   },
   "browserslist": [
     "last 2 Chrome versions",
