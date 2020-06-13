@@ -1,0 +1,29 @@
+// COLORS
+$primary: #000;
+$secondary: #ffe300;
+$grey: #999999;
+$dark-grey: #333333;
+$light-grey: #F1F1F1;
+$off-black: #171717;
+
+$colors-map: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "grey": $grey,
+  "dark-grey": $dark-grey,
+  "off-black": $off-black,
+  "white": #ffffff
+);
+
+// FONTS
+$font-noto-sans: 'Noto Sans';
+
+// MIX
+$border-radius: 2px;
+
+
+// Media breakpoints
+$phone: 37.5em; // 600px
+$tablet-potrait: 56.25em; // 900px
+$tablet-landscape: 75em; // 900px
+$lg-desktop: 112.5em; // 1200px

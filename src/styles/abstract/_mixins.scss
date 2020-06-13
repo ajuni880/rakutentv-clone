@@ -1,0 +1,33 @@
+@mixin fontAwesomeIcon($contentValue) {
+  content: $contentValue;
+  display: inline-block;
+  font-family: 'Font Awesome 5 Free';
+}
+
+@mixin phone {
+  @media (max-width: $phone) {
+    @content;
+  }
+}
+
+// 600px - 900px
+@mixin tablet-potrait {
+  @media (max-width: $tablet-potrait) {
+    @content;
+  }
+}
+
+// 900px - 1200px
+@mixin tablet-landscape {
+  @media (max-width: $tablet-landscape) {
+    @content;
+  }
+}
+
+// > 1800px
+@mixin lg-desktop {
+  @media (min-width: $lg-desktop) {
+    @content;
+  }
+}
+

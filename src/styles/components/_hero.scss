@@ -1,0 +1,128 @@
+.hero {
+  height: 105vh;
+  min-height: 100vh;
+
+  @include phone {
+    height: 85vh;
+  }
+
+  @include lg-desktop {
+    height: 100vh;
+  }
+
+  &__inner {
+    height: 100%;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      background: linear-gradient(to top, black, transparent);
+      bottom: 0;
+      left: 0;
+      height: 50%;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  &__bg {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+  }
+
+  &__detail {
+    position: absolute;
+    bottom: 4rem;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+
+    &-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+
+      @include phone {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 4.2rem;
+    margin: 0;
+    text-shadow: 1px 1px $off-black;
+  }
+
+  &__rating {
+    align-items: center;
+    color: $secondary;
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 900;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px $off-black;
+
+    .icon-star {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.btn__purchase {
+  padding: 1.5rem;
+  width: 100%;
+
+  &-inner {
+    display: flex;
+  }
+
+  &-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.6rem;
+  }
+
+  &-pricing {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    span {
+      font-weight: 900;
+      text-transform: initial;
+    }
+
+    small {
+      font-size: 11;
+      text-transform: initial;
+    }
+  }
+}

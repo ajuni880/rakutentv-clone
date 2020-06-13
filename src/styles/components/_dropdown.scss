@@ -1,0 +1,44 @@
+.dropdown {
+  position: relative;
+
+  &__trigger {
+    white-space: nowrap;
+
+    &::after {
+      @include fontAwesomeIcon('\f0d7');
+      position: relative;
+      top: 1px;
+      right: -4px;
+
+      @include phone {
+        display: none;
+      }
+    }
+
+    &:hover {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    position: absolute;
+    left: -2rem;
+    background: $primary;
+    padding: 0 1rem;
+    white-space: nowrap;
+    z-index: 100;
+  }
+
+  &:hover &__content {
+    padding-top: 2rem;
+    display: block;
+  }
+
+  &__item {
+    padding: 1rem 1rem;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,32 @@
+.searchbox {
+  align-items: center;
+  display: flex;
+  position: relative;
+  margin-top: 3px;
+  margin-left: 2rem;
+  min-width: 30rem;
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    margin: 0 1rem;
+    color: $grey;
+    font-size: 1.8rem;
+
+    @include phone {
+      margin: 0 2rem;
+    }
+  }
+
+  &__input {
+    border-radius: 3px;
+    background: $dark-grey;
+    padding: 1.1rem 2rem 1.1rem 4rem;
+    font-size: 1.6rem;
+    width: 100%;
+
+    &:focus {
+      background: #ffffff;
+    }
+  }
+}

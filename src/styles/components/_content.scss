@@ -1,0 +1,18 @@
+.content {
+
+
+  &__inner {
+    display: flex;
+
+  }
+
+  &__content {
+    color: #ffffff;
+    // border: ;
+  }
+
+  &__about {
+    background: $light-grey;
+    padding: 0 2rem;
+  }
+}

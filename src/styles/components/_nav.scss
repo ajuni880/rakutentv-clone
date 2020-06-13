@@ -1,0 +1,58 @@
+.nav {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  margin-left: 2rem;
+
+  @include phone {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: $off-black;
+    padding: 2.5rem;
+    z-index: 10000;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  &__menu-left {
+    display: flex;
+  }
+
+  &__menu-item {
+    margin-right: 2rem;
+    font-weight: 700;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .dropdown__trigger {
+      @extend .hover--secondary;
+    }
+
+    @include phone {
+      &.help-and-devices, &.register {
+        display: none;
+      }
+
+      margin-left: 2rem;
+    }
+  }
+
+  &__searchbox {
+    @include phone {
+      display: none;
+    }
+  }
+
+  &__menu-right {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+
+    @include phone {
+      margin-left: 2rem;
+    }
+  }
+}

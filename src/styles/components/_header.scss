@@ -1,0 +1,24 @@
+.header {
+  background: $primary;
+  height: 6rem;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    padding: 0.5rem 2rem;
+
+    @include lg-desktop {
+      padding: 0 8rem;
+    }
+  }
+
+  &__logo {
+    max-width: 12rem;
+    min-width: 12rem;
+    margin-top: 2px;
+    svg {
+      width: 100%;
+    }
+  }
+}

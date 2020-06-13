@@ -1,0 +1,41 @@
+.coupon-form {
+  width: 34.5rem;
+  border: 2px solid $secondary;
+  border-radius: $border-radius;
+  text-align: center;
+  font-size: 1.6rem;
+  color: $secondary;
+  font-weight: 900;
+  margin-left: 2rem;
+  overflow: hidden;
+
+  @include phone {
+    width: calc(100% - 4rem);
+    margin: 2rem;
+    padding: 0.4rem 0;
+  }
+
+
+  &.is-visible {
+    border: none;
+  }
+
+  button {
+    background: rgba(#000000, .5);
+  }
+
+  &__form {
+    display: flex;
+
+    input, button {
+      flex: 1;
+      height: 100%;
+    }
+
+    input {
+      font-weight: 900;
+      padding: 1rem 0;
+      text-align: center;
+    }
+  }
+}

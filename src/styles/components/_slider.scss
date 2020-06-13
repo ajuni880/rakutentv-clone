@@ -1,0 +1,41 @@
+.slider {
+  position: relative;
+
+  &__scrollable {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 1s ease-in;
+  }
+
+  &__arrow {
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    font-size: 3rem;
+    height: 100%;
+    justify-content: center;
+    top: 0;
+    width: 4rem;
+
+    &--prev {
+      align-items: flex-end;
+      left: -1.5rem;
+      background: linear-gradient(to right, $off-black, transparent);
+      &::after {
+        @include fontAwesomeIcon('\f053');
+        font-weight: 900;
+      }
+    }
+
+    &--next {
+      right: -1.5rem;
+      background: linear-gradient(to right, transparent, $off-black);
+      &::after {
+        @include fontAwesomeIcon('\f054');
+        font-weight: 900;
+      }
+    }
+  }
+}

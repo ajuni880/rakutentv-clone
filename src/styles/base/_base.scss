@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @include phone {
+    font-size: 50%;
+  }
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-noto-sans;
+  font-size: 1.4rem;
+  overflow-x: hidden;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  background: $off-black;
+  user-select: none;
+
+  @include lg-desktop {
+    padding: 0 8rem;
+  }
+}
+
+a {
+  color: #ffffff;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}

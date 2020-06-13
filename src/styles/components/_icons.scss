@@ -1,0 +1,9 @@
+.icon-star {
+  &::before {
+    @include fontAwesomeIcon('\f005');
+    font-weight: 900;
+    color: $secondary;
+    text-shadow: 1px 1px $off-black;
+    margin-right: 0.5rem;
+  }
+}
